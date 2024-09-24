@@ -1,7 +1,7 @@
 export default function Home() {
   return (
-    <div>
-      <main>Ask Me PDF</main>
-    </div>
+    <main>
+      <h1>Ask Me PDF</h1>
+    </main>
   );
 }
