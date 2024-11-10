@@ -7,6 +7,7 @@ import { useDropzone } from 'react-dropzone';
 const FileUploader = () => {
   const onDrop = useCallback((acceptedFiles: File[]) => {
     // Do something with the files
+    console.log('---acceptedFiles:', acceptedFiles);
   }, []);
   const { getRootProps, getInputProps, isDragActive, isFocused, isDragAccept } =
     useDropzone({ onDrop });
