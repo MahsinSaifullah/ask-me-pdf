@@ -7,7 +7,7 @@ import { useCallback, useEffect } from 'react';
 import { useDropzone } from 'react-dropzone';
 
 const FileUploader = () => {
-  const { progess, status, fileId, handleUpload } = useUpload();
+  const { fileId, handleUpload } = useUpload();
   const router = useRouter();
 
   const onDrop = useCallback(async (acceptedFiles: File[]) => {
