@@ -17,7 +17,7 @@ export enum Status {
 const useUpload = () => {
   const [status, setStatus] = useState<Status | null>(null);
   const [fileId, setFileId] = useState<string | null>(null);
-  const [progess, setProgess] = useState<number | null>(null);
+  const [progress, setProgress] = useState<number | null>(null);
   const { user } = useUser();
 
   const handleUpload = async (file: File) => {
@@ -38,7 +38,7 @@ const useUpload = () => {
         );
 
         setStatus(Status.UPLOADING);
-        setProgess(percentageProgress);
+        setProgress(percentageProgress);
       },
       (error) => {
         console.error('Error uploading file', error);
@@ -67,7 +67,7 @@ const useUpload = () => {
   };
 
   return {
-    progess,
+    progress,
     status,
     fileId,
     handleUpload,
