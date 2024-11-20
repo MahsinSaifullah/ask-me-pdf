@@ -1,6 +1,12 @@
 import serviceKey from '@/service_key.json';
-import { initializeApp } from 'firebase-admin';
-import { App, ServiceAccount, cert, getApp, getApps } from 'firebase-admin/app';
+import {
+  initializeApp,
+  App,
+  ServiceAccount,
+  cert,
+  getApp,
+  getApps,
+} from 'firebase-admin/app';
 import { getFirestore } from 'firebase-admin/firestore';
 
 let app: App;

@@ -12,17 +12,17 @@ const Header = () => {
       <SignedIn>
         <div className="flex items-center space-x-4">
           <Button asChild variant="link" className="hidden md:flex">
-            <Link href="/dashbord/upgrade">Pricing</Link>
+            <Link href="/dashboard/upgrade">Pricing</Link>
           </Button>
           <Button asChild variant="outline" className="hidden md:flex">
-            <Link href="/dashbord">My Documents</Link>
+            <Link href="/dashboard">My Documents</Link>
           </Button>
           <Button
             asChild
             variant="outline"
             className="border-indigo-600 hidden md:flex"
           >
-            <Link href="/dashbord/upload">
+            <Link href="/dashboard/upload">
               <FilePlus2 className="text-indigo-600" />
             </Link>
           </Button>

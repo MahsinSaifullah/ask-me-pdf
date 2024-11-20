@@ -52,7 +52,7 @@ const FileUploader = () => {
 
   useEffect(() => {
     if (fileId) {
-      router.push(`dashboard/files/${fileId}`);
+      router.push(`files/${fileId}`);
     }
   }, [fileId, router]);
 
@@ -68,7 +68,6 @@ const FileUploader = () => {
             }`}
             role="progressbar"
             style={{
-              // @ts-ignore
               '--value': progress,
               '--size': '12rem',
               '--thickness': '1.3rem',
