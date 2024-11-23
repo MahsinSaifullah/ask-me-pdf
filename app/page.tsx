@@ -9,6 +9,7 @@ import {
 } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
+import landingImage from './images/landingImage.png';
 
 const FEATURE_PROMPTS = [
   {
@@ -81,7 +82,7 @@ export default function Home() {
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <Image
               alt="App screenshot"
-              src="https://i.imgur.com/VciRSTI.jpeg"
+              src={landingImage}
               width={2432}
               height={1442}
               className="mb-[-0%] rounded-xl shadow-2xl ring-1 ring-gray-900/10"
