@@ -39,6 +39,8 @@ const FileUploader = () => {
     if (file) {
       await handleUpload(file);
     }
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const { getRootProps, getInputProps, isDragActive, isFocused, isDragAccept } =

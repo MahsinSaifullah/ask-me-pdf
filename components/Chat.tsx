@@ -23,7 +23,7 @@ const Chat: React.FC<ChatProps> = ({ id }) => {
   const [isPending, startTransition] = useTransition();
   const bottomOfChatRef = useRef<HTMLDivElement>(null);
 
-  const [snapshot, loading, error] = useCollection(
+  const [snapshot, loading] = useCollection(
     user &&
       query(
         collection(db, 'users', user?.id, 'files', id, 'chat'),
@@ -95,6 +95,8 @@ const Chat: React.FC<ChatProps> = ({ id }) => {
     });
 
     setMessages(newMessages);
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [snapshot]);
 
   return (
