@@ -33,15 +33,16 @@ const FileUploader = () => {
   const { progress, status, fileId, handleUpload } = useUpload();
   const router = useRouter();
 
-  const onDrop = useCallback(async (acceptedFiles: File[]) => {
-    const file = acceptedFiles[0];
+  const onDrop = useCallback(
+    async (acceptedFiles: File[]) => {
+      const file = acceptedFiles[0];
 
-    if (file) {
-      await handleUpload(file);
-    }
-
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+      if (file) {
+        await handleUpload(file);
+      }
+    },
+    [handleUpload]
+  );
 
   const { getRootProps, getInputProps, isDragActive, isFocused, isDragAccept } =
     useDropzone({
