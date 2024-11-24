@@ -1,4 +1,3 @@
-import serviceKey from '@/service_key.json';
 import {
   initializeApp,
   App,
@@ -10,6 +9,10 @@ import {
 import { getFirestore } from 'firebase-admin/firestore';
 
 let app: App;
+
+const serviceKey = JSON.parse(
+  process.env.FIREBASE_SERVICE_ACCOUNT_KEY as string
+);
 
 if (getApps().length === 0) {
   app = initializeApp({
