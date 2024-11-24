@@ -101,9 +101,9 @@ const Chat: React.FC<ChatProps> = ({ id }) => {
 
   return (
     <div className="flex flex-col h-full overflow-scroll">
-      <div className="flex-1 w-full justify-center flex">
+      <div className="flex-1 w-full">
         {loading ? (
-          <div>
+          <div className="justify-center flex">
             <Loader2Icon className="animate-spin h-20 w-20 text-indigo-600 mt-20" />
           </div>
         ) : (
